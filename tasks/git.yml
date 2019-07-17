@@ -1,0 +1,16 @@
+---
+- name: Install Git on CentOS7 
+  yum: name=git state=present
+
+- name: Configure Git report post installation
+  command: "git config --global user.name 'Bhushan'"
+
+- name: configuer git authentication
+  command: "git config --global user.email 'bmahajan0@gmail.com'"
+  
+- name: clone Git repo
+  git:
+    repo:  https://github.com/18414/ansible.git
+    dest: /home/ansible/ansible
+    
+
