@@ -3,14 +3,14 @@
   yum: name=git state=present
 
 - name: Configure Git report post installation
-  command: "git config --global user.name 'Bhushan'"
+  command: "git config --global user.name '{{ user }}'"
 
 - name: configuer git authentication
-  command: "git config --global user.email 'bmahajan0@gmail.com'"
+  command: "git config --global user.email '{{ email }}'"
   
 - name: clone Git repo
   git:
-    repo:  https://github.com/18414/ansible.git
-    dest: /home/ansible/ansible
+    repo:  https://github.com/18414/git-practice.git
+    dest: /home/ansible/
     
 

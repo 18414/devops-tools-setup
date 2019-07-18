@@ -1,17 +1,17 @@
 ---
-- name: Download jdk
-  get_url: 
-    url: http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
-    dest: /opt
-      
-- name: Extract the JDK file 
-  unarchive:
-    src: /opt/jdk-9.0.4_linux-x64_bin.tar.gz
-    dest: /opt/ 
+- name: Installl JDK8
+  yum:
+    name: java-1.8.0
+    state: present
 
-- name 
 - name: Set environment variable
   lineinfile: 
-    path: /root/bashrc
-    line: 'JAVA_HOME="/opt/jdk-9.0.4_linux-x64"'
+    path: /etc/profile
+    line: "{{ item }}"
+  with_items: 
+    - export JAVA_HOME=/opt/jdk1.8.0_152 
+    - export PATH=${JAVA_HOME}/bin:${PATH}
+
+- name: Update /etc/profile file 
+  command: source /etc/profile
      

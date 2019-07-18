@@ -18,15 +18,20 @@ Dependencies
 
 A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-Example Playbook
+How to use Role and run Playbooks
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too: 
+Below is the common.yml 
 
-    - hosts: servers
+    - hosts: localhost
       roles:
-         - { role: username.rolename, x: 42 }
+         - devops-tools-setup
 
+
+ RUN it: ansible-playbook -i hosts common.yml --tags "jdk"
+
+Note: mention the tag as per your requirement like git, maven, jenkins, jdk and Docker
 License
 -------
 
