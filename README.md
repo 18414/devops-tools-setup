@@ -38,8 +38,7 @@ Variable: mention the username and email id in the roles vars directory
 
 License
 -------
-
-BSD
+Personal
 
 Author Information
 ------------------
