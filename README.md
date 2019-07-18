@@ -32,6 +32,10 @@ Below is the common.yml
  RUN it: ansible-playbook -i hosts common.yml --tags "jdk"
 
 Note: mention the tag as per your requirement like git, maven, jenkins, jdk and Docker
+
+Variable: mention the username and email id in the roles vars directory
+--------
+
 License
 -------
 

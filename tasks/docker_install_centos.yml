@@ -29,6 +29,7 @@
         yum: 
           name: "{{ item }}" 
           state: latest
+        when: ansible_distribution == "CentOS"
         with_items:
           - yum-utils
           - device-mapper-persistent-data
