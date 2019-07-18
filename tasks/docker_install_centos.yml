@@ -1,8 +1,4 @@
 ---
-  - hosts: doc
-    become: yes
-#   strategy: debug
-    tasks:
       - name: "add docker repository"
         get_url:
           url: https://download.docker.com/linux/centos/docker-ce.repo

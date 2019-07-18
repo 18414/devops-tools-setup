@@ -1,2 +1,17 @@
 ---
 # tasks file for devops-tools-setup
+
+- import_tasks: jenkins.yml
+  tags: jenkins
+
+- import_tasks: jdk_install_tar_tmp.yml
+  tags: jdk
+
+- import_tasks: git.yml
+  tags: git
+
+- import_tasks: docker_install_centos.yml
+  tags: docker
+
+- import_tasks: maven.yml
+  tags: maven
