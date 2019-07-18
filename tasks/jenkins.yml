@@ -4,14 +4,10 @@
     name: wget
     state: present
 
-- name: Install  JDK
-  yum:
-    name: java-1.8.0
-    state: present
-
 - name: Download jenkins repo
   get_url:
-    url: http://pkg.jenkins-ci.org/redhat-statble/jenkins.repo
+    # url: http://pkg.jenkins-ci.org/redhat-statble/jenkins.repo
+    url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
     dest: /etc/yum.repos.d/jenkins.repo
 
 - name: Import Jenkins Key

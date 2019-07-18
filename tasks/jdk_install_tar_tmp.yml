@@ -2,11 +2,14 @@
 - name: Download jdk
   get_url: 
     url: http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
-    dest: /opt/jdk-9.0.4_linux-x64_bin.tar.gz
+    dest: /opt
       
 - name: Extract the JDK file 
-  unarchive: src=/opt/jdk-9.0.4_linux-x64_bin.tar.gz dest=/opt/ remote_src=true
+  unarchive:
+    src: /opt/jdk-9.0.4_linux-x64_bin.tar.gz
+    dest: /opt/ 
 
+- name 
 - name: Set environment variable
   lineinfile: 
     path: /root/bashrc
