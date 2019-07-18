@@ -13,5 +13,5 @@
     - export PATH=${JAVA_HOME}/bin:${PATH}
 
 - name: Update /etc/profile file 
-  command: source /etc/profile
+  shell: source /etc/profile
      
