@@ -11,6 +11,5 @@
 - name: clone Git repo
   git:
     repo:  https://github.com/18414/git-practice.git
-    dest: /home/ansible/git
-    
-
+    dest: /home/ansible/git-practice
+    #separate_git_dir: /home/ansible/git-practice.git
