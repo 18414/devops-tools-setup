@@ -15,3 +15,6 @@
 
 - import_tasks: maven.yml
   tags: maven
+
+- import_tasks: tomcat.yml
+  tags: tomcat
