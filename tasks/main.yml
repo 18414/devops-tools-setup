@@ -1,6 +1,10 @@
 ---
 # tasks file for devops-tools-setup
 
+- name: TASKS LIST
+  debug: 
+    msg: "You can install individually jenkins, JDK, Git, Docker, maven and Tomcat using Ansible tags"
+
 - import_tasks: jenkins.yml
   tags: jenkins
 
