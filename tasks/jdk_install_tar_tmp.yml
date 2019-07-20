@@ -9,7 +9,7 @@
     path: /etc/profile
     line: "{{ item }}"
   with_items: 
-    - export JAVA_HOME=/opt/jdk1.8.0_152 
+    - export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.212.b04-0.el7_6.x86_64 
     - export PATH=${JAVA_HOME}/bin:${PATH}
 
 - name: Update /etc/profile file 
