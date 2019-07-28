@@ -57,4 +57,3 @@
         register: docker_info
         changed_when: False 
 
-      - import_tasks: docker_launch_nginx_lb_v1.yml
