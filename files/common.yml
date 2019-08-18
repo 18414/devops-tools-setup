@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: "{{ my_host }}"
   become: true
   roles: 
     - devops-tools-setup
